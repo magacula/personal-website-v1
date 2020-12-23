@@ -21,4 +21,306 @@ Global Styles
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+html,
+body {
+  font-family: "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1rem;
+}
+
+body.is-preload *,
+body.is-preload *:before,
+body.is-preload *:after {
+  -webkit-animation: none !important;
+  animation: none !important;
+  -webkit-transition: none !important;
+  transition: none !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img:not(.logo) {
+  width: 100%;
+}
+
+img {
+  display: block;
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4.5rem;
+  }
+  h2 {
+    font-size: 3.75rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1.125rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+/*** Global Classes ***/
+header {
+  /** Personal Brand Logo ***/
+  /*** Nav ***/
+}
+
+header .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  -webkit-animation: animate 0.5s 1.1s ease 1 both;
+          animation: animate 0.5s 1.1s ease 1 both;
+}
+
+header .logo a {
+  color: #000;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 1.5px;
+}
+
+header .nav {
+  height: 80px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  -webkit-transition: all 0.25s cubic-bezier(1, 0, 0.58, 0.97);
+  transition: all 0.25s cubic-bezier(1, 0, 0.58, 0.97);
+}
+
+header .nav-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  height: 80px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+header .nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .nav__item:hover {
+  color: #555;
+}
+
+header .nav__link {
+  color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 20px;
+  height: 100%;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+header .nav__link:nth-child(1) {
+  -webkit-animation: animate 0.2s 1s ease 1 both;
+          animation: animate 0.2s 1s ease 1 both;
+}
+
+header .nav__link:nth-child(2) {
+  -webkit-animation: animate 0.2s 1.3s ease 1 both;
+          animation: animate 0.2s 1.3s ease 1 both;
+}
+
+header .nav__link:nth-child(3) {
+  -webkit-animation: animate 0.2s 1.6s ease 1 both;
+          animation: animate 0.2s 1.6s ease 1 both;
+}
+
+header .nav__link:nth-child(4) {
+  -webkit-animation: animate 0.2s 1.9s ease 1 both;
+          animation: animate 0.2s 1.9s ease 1 both;
+}
+
+header .nav__link:hover {
+  color: #5c5c5c;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+header .nav .nav-toggle {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: none;
+}
+
+header .nav .nav-toggle span {
+  background-color: #000;
+  width: 25px;
+  height: 3px;
+  margin: 2px;
+  border-radius: 10px;
+}
+
+/*** Mobile Devices ***/
+@media screen and (max-width: 960px) {
+  header .nav .nav-toggle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    cursor: pointer;
+    position: absolute;
+  }
+  .logo a {
+    display: none;
+  }
+  .nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .nav-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: 10;
+    color: #fff;
+  }
+  header .nav__list {
+    position: absolute;
+    display: none;
+    top: 50px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-animation: animate 0.1s 0.1s ease-in 1 both;
+            animation: animate 0.1s 0.1s ease-in 1 both;
+  }
+  .nav__item {
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    background-color: pink;
+  }
+  .nav__link {
+    width: 100%;
+    color: #fff;
+  }
+  header .nav__list.nav-active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+/*** Intro ***/
 /*# sourceMappingURL=styles.css.map */
