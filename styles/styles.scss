@@ -45,19 +45,6 @@ body {
   font-size: 1rem;
 }
 
-body.is-preload *,
-body.is-preload *:before,
-body.is-preload *:after {
-  -moz-animation: none !important;
-  -webkit-animation: none !important;
-  -ms-animation: none !important;
-  animation: none !important;
-  -moz-transition: none !important;
-  -webkit-transition: none !important;
-  -ms-transition: none !important;
-  transition: none !important;
-}
-
 a {
   text-decoration: none;
 }
@@ -103,7 +90,35 @@ img {
   }
 }
 
-/*** Global Classes ***/
+/*
+=====================================================
+Global Classes 
+=====================================================
+*/
+
+/*============== Section ================*/
+.section {
+  padding: 4rem 0 2rem 0;
+}
+
+.section-title,
+.section-subtitle {
+  text-align: center;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  color: $primary-color;
+  margin-bottom: 1.5rem;
+}
+
+.section-subtitle {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/*============== Header / Nav ================*/
 header {
   width: 100%;
   position: fixed;
@@ -122,7 +137,7 @@ header {
     }
   }
 
-  /*** Nav ***/
+  /*============== Nav ================*/
   .nav {
     height: 80px;
     width: 100%;
@@ -131,7 +146,6 @@ header {
     align-items: center;
     position: fixed;
     top: 0;
-    transition: all 0.25s cubic-bezier(1, 0, 0.58, 0.97);
 
     &-container {
       display: flex;
@@ -141,21 +155,23 @@ header {
       height: 80px;
       margin: 0 auto;
       padding: 0 50px;
+      transition: all 0.3s cubic-bezier(1, 0, 0.58, 0.97);
     }
 
     &__list {
       display: flex;
       align-items: center;
+      transition: 0.5s;
     }
 
     &__item {
       &:hover {
-        color: #a7aabd;
+        color: $secondary-color;
       }
     }
 
     &__link {
-      color: $primary-color;
+      color: $black;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -166,7 +182,7 @@ header {
       letter-spacing: 1.2px;
       text-transform: uppercase;
       font-size: 0.9rem;
-      font-weight: 400;
+      // font-weight: 400;
 
       &:nth-child(1) {
         animation: animate 0.2s 1.1s ease 1 both;
@@ -209,7 +225,7 @@ header {
       justify-content: space-between;
       display: none;
       span {
-        background-color: $black;
+        background-color: $white;
         width: 25px;
         height: 3px;
         margin: 2px;
@@ -219,7 +235,26 @@ header {
   }
 }
 
-/*** Mobile Devices ***/
+/*============== Active Menu ================*/
+.active-link {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -0.7rem;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: $primary-color;
+  }
+}
+
+/*
+=====================================================
+Mobile Devices 
+=====================================================
+*/
 @media screen and (max-width: 960px) {
   header .nav .nav-toggle {
     display: flex;
@@ -229,8 +264,14 @@ header {
     // z-index: 99;
   }
 
-  .logo a {
-    display: none;
+  header .logo {
+    position: absolute;
+    top: 20px;
+    left: 1rem;
+
+    a {
+      color: white;
+    }
   }
 
   .nav {
@@ -246,7 +287,7 @@ header {
     align-items: center;
     z-index: 10;
     color: $white;
-    background-color: $white;
+    background-color: $black;
   }
 
   header .nav__list {
@@ -267,8 +308,8 @@ header {
     padding: 1rem;
     width: 100%;
     color: $white;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
   }
 
   header .nav__link {
@@ -304,9 +345,31 @@ header {
   header .nav__link:nth-child(4) {
     animation: animate 0.15s ease-in 1 both;
   }
+
+  .active-link {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -0.7rem;
+      left: 45%;
+      width: 10%;
+      height: 3px;
+      background-color: #a7aabd;
+    }
+  }
 }
 
-/*** Intro ***/
+/*
+=====================================================
+Introduction Section
+=====================================================
+*/
+.intro {
+  position: relative;
+}
+
 .intro-content {
   display: flex;
   align-items: center;
