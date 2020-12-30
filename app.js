@@ -4,6 +4,7 @@ const menu = document.querySelector(".nav__list");
 const navLink = document.querySelectorAll(".nav__link");
 const navLogo = document.getElementById("logo");
 const sections = document.querySelectorAll("section[id]");
+const header = document.getElementById("header");
 
 /*===== Display / hide (toggles) mobile menu =====*/
 const mobileMenu = () => {
@@ -40,7 +41,6 @@ const scrollActive = () => {
     const sectionHeight = current.offsetHeight;
     const sectionTop = current.offsetTop - 50;
     const sectionId = current.getAttribute("id");
-    console.log(`.nav__list .nav__item a[href='#${sectionId}']`);
 
     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
       document
@@ -54,6 +54,22 @@ const scrollActive = () => {
   });
 };
 window.addEventListener("scroll", scrollActive);
+
+/*===== Change background header =====*/
+const scrollHeader = () => {
+  if (window.scrollY >= 200) {
+    console.log("scrolled past 200px");
+    header.classList.add("scroll-header");
+  } else {
+    header.classList.remove("scroll-header");
+  }
+
+  //   // removes the highlight class when website first renders
+  //   if (window.scrollY < 200 && header) {
+  //     header.classList.remove("highlight");
+  //   }
+};
+window.addEventListener("scroll", scrollHeader);
 
 // Runs all functions
 const app = () => {
