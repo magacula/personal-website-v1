@@ -13,8 +13,8 @@
     <title>Makoi Gacula's Portfolio</title>
   </head>
   <body>
-    <!-- NAVIGATION -->
-    <header id="header" class="scroll-header">
+    <!--===== NAVIGATION =====-->
+    <header id="header">
       <nav class="nav">
         <div class="nav-container">
           <!-- Add SVG of custom logo later -->
@@ -36,9 +36,9 @@
             <li class="nav__item">
               <a href="#about" class="nav__link">About Me</a>
             </li>
-            <li class="nav__item">
+            <!-- <li class="nav__item">
               <a href="#skills" class="nav__link">Skills</a>
-            </li>
+            </li> -->
             <li class="nav__item">
               <a href="#projects" class="nav__link">Projects</a>
             </li>
@@ -50,27 +50,61 @@
       </nav>
     </header>
 
-    <!-- HOME (Introduction Section) -->
-    <section class="intro" id="home">
-      <div class="intro-content">
-        <h1>Makoi Gacula</h1>
-        <p>Frontend Developer</p>
-        <button>Download Resume</button>
+    <!--===== HOME =====-->
+    <main>
+      <section class="home" id="home">
+        <div class="home__container">
+          <div class="intro-content">
+            <h1 class="home__name">Makoi Gacula</h1>
+            <span class="home__profession"
+              >Creative / Aspiring Frontend Web Developer</span
+            >
+            <!-- href = "assets/pdf/Makoi-Gacula.pdf" -->
+            <a download="" href="" class="button">Download Resume</a>
+          </div>
+
+          <div class="home__social">
+            <a href="#" class="home__social-icon"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="#" class="home__social-icon"
+              ><i class="fab fa-github"></i
+            ></a>
+          </div>
+
+          <div class="home__img">
+            <img id="home-pic" src="./assets/images/home-pic.JPG" alt="" />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--===== About Section (Introduction Section) =====-->
+    <section class="section" id="about">
+      <h2 class="section-title">About Me</h2>
+      <div class="about__container">
+        <div class="about__data">
+          <img src="./assets/images/profile-pic.jpg" id="profile-pic" />
+          <p class="about__description">
+            <span class="greeting">Hi, I'm Koi.</span> I'm an aspiring Frontend
+            Developer with a passion for frontend development and design. I'm
+            currently a 4th year student at California State University, Long
+            Beach pursing a degree in Computer Science. I strive to use my
+            skills in frontend web technologies and work towards a career that
+            will allow me to channel my creativity in building visually
+            appealing software and engaging experiences.
+          </p>
+          <p class="sub-desc">
+            Aside from coding, I have a love for music, photography, and visual
+            arts.
+          </p>
+        </div>
       </div>
     </section>
 
-    <!-- About Section -->
-    <section class="section" id="about">
-      <h1 class="section-title">About Me</h1>
-    </section>
-
-    <section>
-      <h1>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto,
-        quaerat reiciendis. Autem iure similique doloremque minima quisquam in,
-        ea earum voluptatum illum, sit quia inventore optio, modi quo quas
-        facere.
-      </h1>
+    <!--===== Skills Section (Introduction Section) =====-->
+    <section class="section" id="projects">
+      <h2 class="section-title">My Work</h2>
     </section>
 
     <script src="./app.js"></script>

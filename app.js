@@ -57,17 +57,11 @@ window.addEventListener("scroll", scrollActive);
 
 /*===== Change background header =====*/
 const scrollHeader = () => {
-  if (window.scrollY >= 200) {
-    console.log("scrolled past 200px");
+  if (window.scrollY >= 100) {
     header.classList.add("scroll-header");
   } else {
     header.classList.remove("scroll-header");
   }
-
-  //   // removes the highlight class when website first renders
-  //   if (window.scrollY < 200 && header) {
-  //     header.classList.remove("highlight");
-  //   }
 };
 window.addEventListener("scroll", scrollHeader);
 
