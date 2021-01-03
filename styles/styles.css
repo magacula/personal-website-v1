@@ -50,9 +50,14 @@ img {
   display: block;
 }
 
+p {
+  color: #524748;
+  font-weight: 500;
+}
+
 @media screen and (min-width: 800px) {
   h1 {
-    font-size: 4.5rem;
+    font-size: 5rem;
   }
   h2 {
     font-size: 3.75rem;
@@ -130,6 +135,10 @@ header .logo a {
   letter-spacing: 1.5px;
 }
 
+header .logo a:hover {
+  color: #fbf9f9;
+}
+
 header .nav {
   height: 80px;
   width: 100%;
@@ -142,6 +151,7 @@ header .nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  /*============== Animations ================*/
 }
 
 header .nav-container {
@@ -158,7 +168,6 @@ header .nav-container {
   padding: 0 50px;
   -webkit-transition: all 0.3s cubic-bezier(1, 0, 0.58, 0.97);
   transition: all 0.3s cubic-bezier(1, 0, 0.58, 0.97);
-  background-color: transparent;
 }
 
 header .nav__list {
@@ -195,6 +204,7 @@ header .nav__link {
   letter-spacing: 1.2px;
   text-transform: uppercase;
   font-size: 0.9rem;
+  font-weight: 500;
 }
 
 header .nav__link:nth-child(1) {
@@ -244,6 +254,24 @@ header .nav__link:hover {
     opacity: 1;
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
+  }
+}
+
+@-webkit-keyframes animate2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -304,16 +332,180 @@ header .nav .nav-toggle span {
   color: #fbf9f9;
 }
 
+.scroll-header #logo {
+  color: #fbf9f9;
+}
+
 .scroll-header .active-link::after {
   background-color: #fbf9f9;
 }
 
 /*
 =====================================================
-Mobile Devices 
+Home Section
 =====================================================
 */
+.home {
+  background-color: #000;
+  overflow: hidden;
+}
+
+.home__container {
+  position: relative;
+  height: calc(100vh - 6rem);
+  -ms-grid-rows: (max-content)[2];
+      grid-template-rows: repeat(2, -webkit-max-content);
+      grid-template-rows: repeat(2, max-content);
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  row-gap: 1rem;
+  margin: 0 4rem 0 4rem;
+}
+
+.intro-content {
+  position: relative;
+  margin-top: 100px;
+  margin-left: 2rem;
+  border-left: 4px solid #fff;
+  color: #fbf9f9;
+  padding-left: 2.5rem;
+  z-index: 1;
+}
+
+.intro-content .home__name {
+  margin-top: 2rem;
+  font-size: 3.2rem;
+  letter-spacing: 3px;
+}
+
+.intro-content .home__profession {
+  display: block;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.intro-content .button {
+  display: inline-block;
+  background-color: #051937;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #a7aabd;
+}
+
+.intro-content .button:hover {
+  background-color: #a7aabd;
+  color: #fbf9f9;
+}
+
+.home__img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 5px;
+  z-index: 0;
+}
+
+.home__img img {
+  height: 100%;
+  max-width: 500px;
+}
+
+.home__social {
+  position: relative;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 1rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 10rem;
+}
+
+.fa-linkedin,
+.fa-github {
+  color: #fbf9f9;
+  margin-left: 1rem;
+}
+
+.fa-linkedin:hover,
+.fa-github:hover {
+  color: #a7aabd;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+.home__social-icon {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+/*
+============================================================
+About Section
+============================================================
+*/
+#about {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+}
+
+.greeting {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+#profile-pic {
+  width: 400px;
+  height: auto;
+}
+
+.about__container {
+  max-width: 1024px;
+  width: calc(100% - 2rem);
+  margin: 0 1rem 0 1rem;
+  display: -ms-grid;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.about__data {
+  display: -ms-grid;
+  display: grid;
+  text-align: center;
+  justify-items: center;
+  width: calc(100% - 2rem);
+}
+
+.about__description {
+  margin-top: 1.5rem;
+}
+
+.sub-desc {
+  margin-top: 1rem;
+}
+
+/*
+============================================================
+Mobile Devices 
+============================================================
+*/
 @media screen and (max-width: 960px) {
+  /*============== Header / Nav ================*/
+  .section-title {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+  }
   header .nav .nav-toggle {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -334,7 +526,7 @@ Mobile Devices
     left: 1rem;
   }
   header .logo a {
-    color: white;
+    color: #fff;
   }
   .nav {
     -webkit-box-orient: vertical;
@@ -433,47 +625,42 @@ Mobile Devices
     height: 3px;
     background-color: #a7aabd;
   }
-}
-
-/*
-=====================================================
-Introduction Section
-=====================================================
-*/
-.intro {
-  position: relative;
-  background-color: #000;
-}
-
-.intro-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  justify-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 20% 0 5% 0;
-  left: 0;
-  right: 0;
-  z-index: 0;
-}
-
-.intro-content h1 {
-  letter-spacing: 3px;
-  -webkit-animation: animate 0.2s 1.9s ease-in 1 both;
-          animation: animate 0.2s 1.9s ease-in 1 both;
-}
-
-.intro-content p {
-  margin-top: 0.25rem;
-  font-size: 1.3rem;
-  font-weight: 500;
-  -webkit-animation: animate 0.4s 2.4s ease-in 1 both;
-          animation: animate 0.4s 2.4s ease-in 1 both;
+  /*============== Home ================*/
+  .home__container {
+    height: 100vh;
+    margin: 4rem 0 0 0;
+  }
+  .intro-content .home__name {
+    font-size: 4rem;
+    letter-spacing: 3px;
+  }
+  .intro-content .home__profession {
+    margin-top: 0.25rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  .intro-content .home__profession {
+    display: block;
+    font-weight: bold;
+  }
+  .intro-content .home__profession {
+    font-size: 0.938rem;
+    margin-bottom: 1.5rem;
+  }
+  .home__img {
+    bottom: 5px;
+    z-index: 0;
+  }
+  .home__img img {
+    min-width: 450px;
+  }
+  .home__social {
+    margin-top: 5rem;
+  }
+  /*============== About ================*/
+  #profile-pic {
+    width: 250px;
+    height: auto;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
