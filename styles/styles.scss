@@ -119,6 +119,33 @@ Global Classes
   margin-top: 1.5rem;
 }
 
+.active-section {
+  position: relative;
+  &::after {
+    content: "";
+    display: block;
+    width: 150px;
+    height: 2px;
+    position: relative;
+    bottom: 0.05em;
+    background-color: $black;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    opacity: 0.5;
+  }
+
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -0.7rem;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: $secondary-color-light;
+  }
+}
+
 .section-subtitle {
   display: block;
   font-size: 0.75rem;
@@ -157,6 +184,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 
     &__container {
       display: flex;
@@ -178,6 +206,19 @@ header {
     &__item {
       &:hover {
         color: $secondary-color-light;
+        cursor: pointer;
+
+        a::after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 3px;
+          position: absolute;
+          bottom: -0.5rem;
+          background-color: $secondary-color-light;
+          transition: transform 250ms ease-in-out;
+          transform-origin: 0% 50%;
+        }
       }
     }
 
@@ -275,7 +316,6 @@ header {
 /*============== Change background header ================*/
 .scroll-header {
   background-color: $primary-color;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.7s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
@@ -465,7 +505,7 @@ Projects Section
   align-items: center;
   display: grid;
   width: calc(100% - 2rem);
-  margin-bottom: 2rem;
+  margin-bottom: 6rem;
 }
 
 .img-container {
@@ -479,6 +519,12 @@ Projects Section
 .project-img {
   width: 100%;
   max-width: 550px;
+  opacity: 0.5;
+  &:hover {
+    opacity: 1;
+    transition: all 0.9s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transform: scale(1.02);
+  }
 }
 
 .links-container {
@@ -534,7 +580,6 @@ Projects Section
         background-color: $secondary-color;
         transform: scale(1.12);
         transition: 0.4s;
-        cursor: pointer;
       }
     }
   }
@@ -563,6 +608,7 @@ Mobile Devices
   header,
   .scroll-header {
     background-color: black;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   }
 
   header .logo {
@@ -578,7 +624,6 @@ Mobile Devices
   .nav {
     flex-direction: column;
     align-items: flex-start;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     font-weight: 500;
   }
 
@@ -610,6 +655,14 @@ Mobile Devices
     // color: $white;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
+
+    &:hover {
+      color: $secondary-color;
+
+      a::after {
+        visibility: hidden;
+      }
+    }
   }
 
   header .nav__link {
@@ -621,7 +674,7 @@ Mobile Devices
     font-size: 1.1rem;
 
     &:hover {
-      color: #a7aabd;
+      color: $secondary-color;
     }
   }
 
