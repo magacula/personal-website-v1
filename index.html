@@ -10,13 +10,13 @@
       integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
       crossorigin="anonymous"
     />
-    <title>Makoi Gacula's Portfolio</title>
+    <title>Makoi Gacula</title>
   </head>
   <body>
     <!--===== NAVIGATION =====-->
     <header id="header">
       <nav class="nav">
-        <div class="nav-container">
+        <div class="nav__container">
           <!-- Add SVG of custom logo later -->
           <!-- <img src="/" alt=""> -->
           <div class="logo">
@@ -54,20 +54,24 @@
     <main>
       <section class="home" id="home">
         <div class="home__container">
-          <div class="intro-content">
+          <div class="home-content">
             <h1 class="home__name">Makoi Gacula</h1>
-            <span class="home__profession"
-              >Creative / Aspiring Frontend Web Developer</span
-            >
+            <span class="home__profession">Creative / Frontend Developer</span>
             <!-- href = "assets/pdf/Makoi-Gacula.pdf" -->
             <a download="" href="" class="button">Download Resume</a>
           </div>
 
           <div class="home__social">
-            <a href="#" class="home__social-icon"
+            <a
+              href="https://www.linkedin.com/in/makoigacula/"
+              target="_blank"
+              class="home__social-icon"
               ><i class="fab fa-linkedin"></i
             ></a>
-            <a href="#" class="home__social-icon"
+            <a
+              href="https://github.com/magacula"
+              target="_blank"
+              class="home__social-icon"
               ><i class="fab fa-github"></i
             ></a>
           </div>
@@ -86,13 +90,12 @@
         <div class="about__data">
           <img src="./assets/images/profile-pic.jpg" id="profile-pic" />
           <p class="about__description">
-            <span class="greeting">Hi, I'm Koi.</span> I'm an aspiring Frontend
-            Developer with a passion for frontend development and design. I'm
-            currently a 4th year student at California State University, Long
-            Beach pursing a degree in Computer Science. I strive to use my
-            skills in frontend web technologies and work towards a career that
-            will allow me to channel my creativity in building visually
-            appealing software and engaging experiences.
+            <span class="greeting">Hi, I'm Koi.</span> I'm a frontend developer
+            currently seeking frontend web positions. I'm a 4th year student at
+            California State University, Long Beach pursing a degree in Computer
+            Science. I strive to use my skills in frontend web technologies and
+            work towards a career that will allow me to channel my creativity in
+            building visually appealing software and engaging experiences.
           </p>
           <p class="sub-desc">
             Aside from coding, I have a love for music, photography, and visual
@@ -102,11 +105,50 @@
       </div>
     </section>
 
-    <!--===== Skills Section (Introduction Section) =====-->
+    <!--===== Projects Section =====-->
     <section class="section" id="projects">
-      <h2 class="section-title">My Work</h2>
+      <h2 class="section-title projects-title">My Projects</h2>
+      <div class="projects__container">
+        <div class="project__item" id="travel-site">
+          <div class="img-container">
+            <img
+              src="./assets/images/travel-site-screenshoot.png"
+              alt="project-1"
+              class="project-img"
+            />
+            <div class="links-container">
+              <a
+                href="https://react-gatsby-travel-website.netlify.app/"
+                class="link"
+                >View Site</a
+              >
+              <a href="" class="link">See Code</a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-name">XCAPE Travel Agency Site</h3>
+            <p class="project-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+              fuga, sed sint dicta numquam corrupti laboriosam libero optio
+              consectetur veritatis distinctio error reiciendis, dignissimos non
+              voluptas at nulla praesentium hic! Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Nostrum nemo dolore, reiciendis
+              autem sapiente soluta vel! Deserunt odit perspiciatis adipisci ad
+              numquam eum dicta temporibus sint rerum praesentium, ratione
+              omnis.
+            </p>
+            <div class="used">
+              <ul class="used__list">
+                <li class="used__item">React.js</li>
+                <li class="used__item">Gatsby</li>
+                <li class="used__item">GraphQL</li>
+                <li class="used__item">Styled Components</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-
     <script src="./app.js"></script>
   </body>
 </html>
