@@ -36,14 +36,13 @@
             <li class="nav__item">
               <a href="#about" class="nav__link">About Me</a>
             </li>
-            <!-- <li class="nav__item">
-              <a href="#skills" class="nav__link">Skills</a>
-            </li> -->
             <li class="nav__item">
               <a href="#projects" class="nav__link">Projects</a>
             </li>
             <li class="nav__item">
-              <a href="#contact" class="nav__link">Contact</a>
+              <a href="mailto: makoigacula@gmail.com" class="nav__link"
+                >Contact</a
+              >
             </li>
           </ul>
         </div>
@@ -56,8 +55,8 @@
         <div class="home__container">
           <div class="home-content">
             <h1 class="home__name">Makoi Gacula</h1>
-            <span class="home__profession">Frontend Developer / Creative</span>
-            <!-- href = "assets/pdf/Makoi-Gacula.pdf" -->
+            <span class="home__profession">Frontend Developer / Creator</span>
+            <!-- download = "assets/pdf/Makoi-Gacula.pdf" -->
             <a download="" href="" class="button">Download Resume</a>
           </div>
 
@@ -87,8 +86,8 @@
     <section class="section" id="about">
       <h2 class="section-title" id="about-section">About Me</h2>
       <div class="about__container">
+        <img src="./assets/images/profile-pic.jpg" id="profile-pic" />
         <div class="about__data">
-          <img src="./assets/images/profile-pic.jpg" id="profile-pic" />
           <p class="about__description">
             <span class="greeting">Hi, I'm Koi.</span> I'm an aspiring frontend
             developer currently seeking frontend development work. I'm a 4th
@@ -98,10 +97,28 @@
             channel my creativity in building visually appealing software and
             engaging experiences.
           </p>
-          <p class="sub-desc">
+          <p class="about__sub-desc">
             Aside from coding, I have a love for music, photography, and visual
             arts.
           </p>
+
+          <div class="tech__stack">
+            <p class="about__description--tech">
+              Here are the technologies I'm currently trying to master:
+            </p>
+
+            <ul class="skills">
+              <li class="skills__item">React</li>
+              
+              <li class="skills__item">HTML</li>
+              <li class="skills__item">JavaScript (ES6+)</li>
+              <li class="skills__item">CSS / SCSS / Sass</li>
+              <li class="skills__item">Node.js</li>
+              <!-- <li class="skills__item"></li>
+            <li class="skills__item"></li>
+            <li class="skills__item"></li> -->
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -287,6 +304,39 @@
         </div>
       </div>
     </section>
+
+    <!--===== Footer Section =====-->
+    <footer class="footer">
+      <div class="footer__description">
+        <p class="footer__sub-des">
+          I'm Koi and this is my personal portfolio website. Feel free to
+          contact me for open job opportunities.
+        </p>
+
+        <div class="footer__social">
+          <a
+            href="https://www.linkedin.com/in/makoigacula/"
+            target="_blank"
+            class="footer__social-icon"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a
+            href="https://github.com/magacula"
+            target="_blank"
+            class="footer__social-icon"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            href="https://github.com/magacula"
+            target="_blank"
+            class="footer__social-icon"
+            ><i class="fas fa-envelope-square"></i
+          ></a>
+        </div>
+
+        <p class="website__rights">© Makoi Gacula 2021.</p>
+      </div>
+    </footer>
     <script src="./app.js"></script>
   </body>
 </html>

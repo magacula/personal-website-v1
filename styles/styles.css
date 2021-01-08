@@ -533,18 +533,57 @@ About Section
 .about__data {
   display: -ms-grid;
   display: grid;
-  justify-items: center;
   width: calc(100% - 2rem);
 }
 
 .about__data .about__description {
+  text-indent: 5%;
   margin-top: 1.5rem;
   padding: 0 2rem;
 }
 
-.about__data .sub-desc {
-  margin-top: 1rem;
+.about__data .about__sub-desc {
+  text-align: center;
+  margin-top: 0.25rem;
   padding: 0 2rem;
+}
+
+.about__data .about__description--tech {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.about__data .tech__stack {
+  margin-top: 1rem;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+}
+
+.about__data .tech__stack .skills {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(140px, 200px))[2];
+      grid-template-columns: repeat(2, minmax(140px, 200px));
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style-type: disc !important;
+  list-style: disc !important;
+}
+
+.about__data .tech__stack .skills__item {
+  margin-bottom: 2px;
+  color: #000;
+  width: 100%;
+  font-family: inherit;
+  position: relative;
+  padding-left: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 /*
@@ -590,7 +629,7 @@ Projects Section
 
 .project-img {
   width: 100%;
-  max-width: 550px;
+  max-width: 500px;
   opacity: 0.5;
 }
 
@@ -629,7 +668,7 @@ Projects Section
 }
 
 .project-content {
-  padding: 0 10rem;
+  padding: 0 14rem;
 }
 
 .project-content .project-name {
@@ -665,6 +704,58 @@ Projects Section
           transform: scale(1.12);
   -webkit-transition: 0.4s;
   transition: 0.4s;
+}
+
+/*
+============================================================
+Footer 
+============================================================
+*/
+.footer {
+  background-color: #051937;
+}
+
+.footer__title {
+  color: #fbf9f9;
+}
+
+.footer__description {
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+}
+
+.footer__description .footer__sub-des {
+  margin-bottom: 2rem;
+  color: #a7aabd;
+}
+
+.footer__social-icon {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 2rem;
+}
+
+.footer .fab,
+.footer .fas {
+  color: #fbf9f9;
+  margin: 0 0.25rem;
+}
+
+.footer .fab:hover,
+.footer .fas:hover {
+  color: #a7aabd;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.footer .website__rights {
+  font-size: 1rem;
+  margin-top: 1rem;
+  color: #a7aabd;
 }
 
 /*
@@ -841,7 +932,7 @@ Mobile Devices
     height: auto;
   }
   .about__description,
-  .sub-desc {
+  .about__sub-desc {
     margin: 0;
   }
   /*============== Projects ================*/
