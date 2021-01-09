@@ -58,6 +58,7 @@ img {
 p {
   color: #524748;
   font-weight: 500;
+  line-height: 1.4;
 }
 
 @media screen and (min-width: 800px) {
@@ -464,13 +465,15 @@ Home Section
 }
 
 .fa-linkedin,
-.fa-github {
+.fa-github,
+.fa-envelope-square {
   color: #fbf9f9;
   margin-left: 1rem;
 }
 
 .fa-linkedin:hover,
-.fa-github:hover {
+.fa-github:hover,
+.fa-envelope-square:hover {
   color: #cbcbcb;
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
@@ -689,6 +692,11 @@ Projects Section
           transform: scale(1.12);
   -webkit-transition: 0.4s;
   transition: 0.4s;
+}
+
+.weblink {
+  text-decoration: underline;
+  color: #cbcbcb;
 }
 
 /*

@@ -69,6 +69,7 @@ img {
 p {
   color: $text-color;
   font-weight: 500;
+  line-height: 1.4;
 }
 
 @media screen and (min-width: 800px) {
@@ -407,7 +408,8 @@ Home Section
 }
 
 .fa-linkedin,
-.fa-github {
+.fa-github,
+.fa-envelope-square {
   color: $secondary-color-light;
   margin-left: 1rem;
 
@@ -602,6 +604,11 @@ Projects Section
       }
     }
   }
+}
+
+.weblink {
+  text-decoration: underline;
+  color: $secondary-color;
 }
 
 /*
