@@ -163,7 +163,7 @@ header {
     display: flex;
     align-items: center;
     justify-items: center;
-    animation: animate 1.7s 1.8s ease 1 both;
+    animation: animate 1s 1.5s ease 1 both;
     a {
       color: $secondary-color;
       font-weight: 700;
@@ -236,7 +236,7 @@ header {
       font-weight: 500;
 
       &:nth-child(1) {
-        animation: animate 1s 1.5s ease 1 both;
+        animation: animate 1.7s 1.8s ease 1 both;
       }
 
       &:nth-child(2) {

@@ -87,6 +87,6 @@ gsap.from(
     delay: 0.8,
     y: 25,
     ease: "expo.out",
-    stagger: 0.25,
+    stagger: 0.16,
   }
 );

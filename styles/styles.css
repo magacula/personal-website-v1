@@ -158,8 +158,8 @@ header .logo {
       -ms-flex-align: center;
           align-items: center;
   justify-items: center;
-  -webkit-animation: animate 1.7s 1.8s ease 1 both;
-          animation: animate 1.7s 1.8s ease 1 both;
+  -webkit-animation: animate 1s 1.5s ease 1 both;
+          animation: animate 1s 1.5s ease 1 both;
 }
 
 header .logo a {
@@ -261,8 +261,8 @@ header .nav__link {
 }
 
 header .nav__link:nth-child(1) {
-  -webkit-animation: animate 1s 1.5s ease 1 both;
-          animation: animate 1s 1.5s ease 1 both;
+  -webkit-animation: animate 1.7s 1.8s ease 1 both;
+          animation: animate 1.7s 1.8s ease 1 both;
 }
 
 header .nav__link:nth-child(2) {
