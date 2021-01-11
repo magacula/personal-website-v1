@@ -40,7 +40,9 @@
               <a href="#projects" class="nav__link">Projects</a>
             </li>
             <li class="nav__item">
-              <a href="#contact" class="nav__link">Contact</a>
+              <a href="mailto: makoigacula@gmail.com" class="nav__link"
+                >Contact</a
+              >
             </li>
           </ul>
         </div>
@@ -54,8 +56,12 @@
           <div class="home-content">
             <h1 class="home__name">Makoi Gacula</h1>
             <span class="home__profession">Frontend Developer / Creator</span>
-            <!-- download = "assets/pdf/Makoi-Gacula.pdf" -->
-            <a download="" href="" class="button">Download Resume</a>
+            <a
+              href="./assets/pdf/MakoiGacula_FrontendDeveloper_Resume.pdf"
+              class="button"
+              target="__blank"
+              >View Resume</a
+            >
           </div>
 
           <div class="home__social">
@@ -120,9 +126,9 @@
               <li class="skills__item">HTML</li>
               <li class="skills__item">JavaScript (ES6+)</li>
               <li class="skills__item">CSS / SCSS / Sass</li>
-              <li class="skills__item">Node.js</li>
-              <!-- <li class="skills__item"></li>
-            <li class="skills__item"></li>
+              <!--  <li class="skills__item">Node.js</li>
+              <li class="skills__item"></li>
+              <li class="skills__item"></li>
             <li class="skills__item"></li> -->
             </ul>
           </div>
@@ -159,14 +165,14 @@
           <div class="project-content">
             <h3 class="project-name">XCAPE | Travel Agency Website</h3>
             <p class="project-description">
-              This is a website I built of an imagined travel agency company. I
-              created this with React and Gatsby. This project helped me learn
-              the basics of using GraphQL queries to optimize images across
-              multiple devices. I also learned to utilize styled-components as a
-              tool for styling all components of the site. As a developer that
-              values software performance and efficiency, I have come appreciate
-              Gatsby's fast speeds and easy development process along with the
-              many other advantages of static site generators.
+              This is a website I built of an imagined travel agency company,
+              created with React and Gatsby. This project helped me learn how to
+              use GraphQL queries to optimize images across multiple devices. I
+              also learned how to utilize styled-components as an effective tool
+              for styling. As a developer who values software performance and
+              efficiency, I have come to appreciate Gatsby's fast speeds and
+              easy dev experience along with the many other advantages of static
+              site generators.
             </p>
             <div class="used">
               <ul class="used__list">
@@ -211,7 +217,7 @@
                 target="__blank"
                 class="weblink"
                 >Unsplash API</a
-              >. This project allowed me to gain some experience in fetching and
+              >. This project allowed me to gain experience in fetching and
               handling JSON data from a third-party REST API. I then was able to
               utilize React Hooks and JS Fetch API to populate this data to my
               custom UI.
@@ -305,7 +311,7 @@
               of my coursework. This web app can be useful for individuals who
               want to effectively save and budget their money to achieve their
               long-term goals. Since then, I believe my web development skills
-              and eye for visually-appealing design have sharpened.
+              and eye for visually appealing design have sharpened.
             </p>
             <div class="used">
               <ul class="used__list">
@@ -321,8 +327,8 @@
     </section>
 
     <!--===== Footer Section =====-->
-    <section class="footer" id="contact">
-      <footer class="footer__description">
+    <footer class="footer">
+      <div class="footer__description">
         <p class="footer__sub-des">
           I'm Koi and this is my personal portfolio website.<br />Please feel
           free to contact me to discuss a possible job opportunity.
@@ -353,8 +359,8 @@
         </div>
 
         <p class="website__rights">© Makoi Gacula 2021</p>
-      </footer>
-    </section>
+      </div>
+    </footer>
 
     <!--===== GSAP =====-->
     <script src="./js/gsap.min.js"></script>
