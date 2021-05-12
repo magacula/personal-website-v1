@@ -85,7 +85,7 @@ gsap.from(
     opacity: 0,
     duration: 2,
     delay: 0.8,
-    y: 25,
+    y: 100,
     ease: "expo.out",
     stagger: 0.16,
   }
