@@ -5,6 +5,9 @@ const navLink = document.querySelectorAll(".nav__link");
 const navLogo = document.getElementById("logo");
 const sections = document.querySelectorAll("section[id]");
 const header = document.getElementById("header");
+const popUpMenu = document.getElementById("popup-menu");
+const openBtn = document.getElementById("open-popup-btn");
+const closeBtn = document.getElementById("close-popup-btn");
 
 /*===== Display / hide (toggles) mobile menu =====*/
 const mobileMenu = () => {
@@ -65,11 +68,23 @@ const scrollHeader = () => {
 };
 window.addEventListener("scroll", scrollHeader);
 
+/*===== Popup Modal =====*/
+const popupModal = () => {
+  openBtn.addEventListener("click", () => {
+    popUpMenu.classList.toggle("active");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    popUpMenu.classList.remove("active");
+  });
+};
+
 // Runs all functions
 const app = () => {
   mobileMenu();
   hideMenu();
   scrollActive();
+  popupModal();
 };
 app();
 
