@@ -379,7 +379,7 @@ Home Section
     color: $secondary-color;
     &:hover {
       background-color: $secondary-color;
-      color: $secondary-color-light;
+      color: $primary-color;
       transition: 0.5s;
     }
   }
@@ -540,9 +540,7 @@ Projects Section
 .project-img {
   width: 100%;
   max-width: 500px;
-  opacity: 0.5;
   &:hover {
-    opacity: 1;
     transition: all 0.9s cubic-bezier(0.075, 0.82, 0.165, 1);
     transform: scale(1.02);
   }
@@ -564,7 +562,7 @@ Projects Section
   color: $secondary-color;
   &:hover {
     background-color: $secondary-color;
-    color: $secondary-color-light;
+    color: $primary-color;
     transition: 0.5s;
   }
 }
@@ -596,12 +594,6 @@ Projects Section
       font-size: 10px;
       font-weight: 500;
       letter-spacing: 0.5px;
-
-      &:hover {
-        background-color: $secondary-color;
-        transform: scale(1.12);
-        transition: 0.4s;
-      }
     }
   }
 }
@@ -657,6 +649,85 @@ Footer
     margin-top: 1rem;
     color: $secondary-color;
   }
+}
+
+.footer__description .footer__sub-des {
+  padding: 0 1rem;
+}
+
+/*
+============================================================
+Popup Modal
+============================================================
+*/
+.center {
+  transform: translate(0%, -50%);
+}
+
+.popup {
+  margin-top: -400px;
+  margin-bottom: -600px;
+  width: 60vw;
+  padding: 30px 20px;
+  // height: 50vh;
+  background: $secondary-color-light;
+  border-radius: 10px;
+  z-index: 2;
+  text-align: center;
+  opacity: 0;
+  top: -200%;
+  transform: translate(0%, -50%) scale(0.5);
+  transition: opacity 0.3s ease-in-out, top 1s ease-in-out,
+    transform 1s ease-in-out;
+
+  .title {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  .close-btn {
+    margin-top: 15px;
+  }
+
+  .close-btn button {
+    padding: 10px 20px;
+    background-color: $primary-color;
+    color: $secondary-color;
+    border-radius: 0.5rem;
+    border-style: none;
+    transition: 0.3s;
+    font-size: 16px;
+    font-weight: 500;
+    outline: none;
+    &:hover {
+      background-color: $secondary-color;
+      color: $primary-color;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+  }
+}
+
+.active {
+  margin-top: 0;
+  opacity: 1;
+  top: 50%;
+  transform: translate(0%, -50%) scale(1);
+  transition: transform 0.3s cubic-bezier(0.18, 0.89, 0.43, 1.19);
+}
+
+#open-popup-btn {
+  margin-top: 1rem;
+  cursor: pointer;
+  border-style: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.demo-video {
+  padding: 3rem 3rem 1.5rem 3rem;
 }
 
 /*
@@ -860,8 +931,8 @@ Mobile Devices
       text-align: center;
     }
   }
-}
 
-.footer__description .footer__sub-des {
-  padding: 0 1rem;
+  .popup {
+    margin-bottom: -400px;
+  }
 }

@@ -137,11 +137,81 @@
     <section class="section" id="projects">
       <h2 class="section-title projects-title">My Projects</h2>
       <div class="projects__container">
+        <div class="project__item" id="my-spotify-insights">
+          <div class="img-container">
+            <img
+              src="./assets/images/MSI.png"
+              alt="project-5"
+              class="project-img"
+            />
+            <div class="popup center" id="popup-menu">
+              <h3 class="title">Project Demo</h3>
+              <img
+                class="demo-video"
+                src="./assets/images/MSI_DEMO.gif"
+                alt="gif_demo"
+              />
+              <div class="close-btn">
+                <button id="close-popup-btn">Close</button>
+              </div>
+            </div>
+            <div class="popup-container">
+              <button class="link" id="open-popup-btn">View Demo</button>
+            </div>
+            <div class="links-container" id="MSI-links">
+              <a
+                href="https://my-spotify-insights.herokuapp.com/"
+                class="link"
+                target="__blank"
+                >View Site</a
+              >
+              <a
+                href="https://github.com/magacula/my-spotify-insights"
+                class="link"
+                target="__blank"
+                >See Code</a
+              >
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-name">
+              MySpotifyInsights | React + Flask Web App
+            </h3>
+            <p class="project-description">
+              This is my most recent build, where I led a team of 4 students in
+              creating a large-scale web application made with React and Flask.
+              We utilized the
+              <a
+                href="https://developer.spotify.com/documentation/web-api/"
+                target="__blank"
+                class="weblink"
+                >Spotify Web API</a
+              >, allowing users to view their personal Spotify listening data
+              such as top tracks, artists, albums, audio features, and also
+              gives song recommendations based on their listening habits.
+              Normally, Spotify only allows users to see their Spotify stats or
+              "Spotify Wrapped" at the end of the year, however with
+              MySpotifyInsights, users may view their Spotify data any time they
+              chose.
+            </p>
+            <div class="used">
+              <ul class="used__list">
+                <li class="used__item">React</li>
+                <li class="used__item">Python</li>
+                <li class="used__item">Flask</li>
+                <li class="used__item">Spotify API</li>
+                <li class="used__item">Heroku</li>
+                <li class="used__item">TypeScript</li>
+                <li class="used__item">Styled-Components</li>
+              </ul>
+            </div>
+          </div>
+        </div>
         <div class="project__item" id="travel-site">
           <div class="img-container">
             <img
               src="./assets/images/travel-site-screenshoot.png"
-              alt="project-1"
+              alt="project-4"
               class="project-img"
             />
             <div class="links-container">
@@ -159,14 +229,14 @@
           <div class="project-content">
             <h3 class="project-name">XCAPE | Travel Agency Website</h3>
             <p class="project-description">
-              This is a website I built of an imagined travel agency company,
-              created with React and Gatsby. This project helped me learn how to
-              use GraphQL queries to optimize images across multiple devices. I
-              also learned how to utilize styled-components as an effective tool
-              for styling. As a developer who values software performance and
-              efficiency, I have come to appreciate Gatsby's fast speeds and
-              seamless user/developer experience along with many other
-              advantages that come with static site generators.
+              This is a travel agency website I created with React and Gatsby.
+              Building this site has helped me learn GraphQL querying to
+              provide optimized images that improve overall performance. I also
+              learned how to utilize styled-components as an effective tool for
+              component styling. As a developer who values both software
+              performance and efficiency, I have come to appreciate Gatsby's
+              fast speeds and its seamless user and developer experience, along
+              with many other advantages that come with static site generators.
             </p>
             <div class="used">
               <ul class="used__list">
@@ -182,7 +252,7 @@
           <div class="img-container">
             <img
               src="./assets/images/unsplash-react.png"
-              alt="project-2"
+              alt="project-3"
               class="project-img"
             />
             <div class="links-container">
@@ -204,10 +274,10 @@
             <h3 class="project-name">Photo Search Gallery | Web App</h3>
             <p class="project-description">
               This is a web app I built after learning the fundamentals of
-              React. It allows you to search for photos that users have posted
-              on
+              React. It allows users to search for photos that others have
+              posted on
               <a href="https://unsplash.com/" target="__blank" class="weblink"
-                >Unsplash</a
+                >Unsplash.com</a
               >
               via
               <a
@@ -215,10 +285,9 @@
                 target="__blank"
                 class="weblink"
                 >Unsplash API</a
-              >. This project allowed me to gain experience in fetching and
-              handling JSON data from a third-party REST API. I then was able to
-              utilize React Hooks and JS Fetch API to populate this data to my
-              custom UI.
+              >. Here, I gained experience in fetching and handling data from a
+              third-party REST API. I utilized React Hooks and the JS Fetch API
+              to populate this data to my custom UI.
             </p>
             <div class="used">
               <ul class="used__list">
@@ -233,7 +302,7 @@
           <div class="img-container">
             <img
               src="./assets/images/landingPage.png"
-              alt="project-3"
+              alt="project-2"
               class="project-img"
             />
             <div class="links-container">
@@ -254,18 +323,17 @@
           <div class="project-content">
             <h3 class="project-name">COLORS | Landing Page</h3>
             <p class="project-description">
-              This is a single-page Landing Page site I created for another
-              imagined company called COLORS. I created this site with the
-              intention to learn how to use SCSS in my web projects. To enhance
-              the user experience, I used some cool gradients via
+              This is a landing page I created for a made-up company I named
+              COLORS. I built this site intending to learn how to use SCSS
+              styling to my advantage. I included some vibrant color schemes via
               <a
                 href="https://uigradients.com/"
                 target="__blank"
                 class="weblink"
-                >uigradients</a
+                >uiGradients</a
               >
-              and implemented JavaScript to create a nice navbar
-              highlight-effect with smooth scrolling.
+              and also implemented JavaScript to create a smooth and simple
+              navbar highlighting effect.
             </p>
             <div class="used">
               <ul class="used__list">
@@ -281,7 +349,7 @@
           <div class="img-container">
             <img
               src="./assets/images/budget-tracker.png"
-              alt="project-3"
+              alt="project-1"
               class="project-img"
             />
             <div class="links-container">
@@ -307,7 +375,7 @@
               back in 2018. It was my first time working with a Javascript
               Design Pattern and applying data structures to a project outside
               of my coursework. This web app can be useful for individuals who
-              want to effectively save and budget their money to achieve their
+              need to effectively save and budget their money to achieve their
               long-term goals. Since then, I believe my web development skills
               and eye for visually appealing design have sharpened.
             </p>
@@ -328,8 +396,8 @@
     <footer class="footer">
       <div class="footer__description">
         <p class="footer__sub-des">
-          I'm Koi and this is my personal portfolio website.<br />Please feel
-          free to contact me to discuss a possible job opportunity.
+          Thanks for viewing my portfolio!<br />Please feel free to contact me
+          for any questions or to discuss a possible job opportunity.
         </p>
 
         <div class="footer__social">
