@@ -23,6 +23,7 @@ VARIABLES
 ===============
 */
 $section: 4rem 0 2rem 0;
+$transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 
 /*
 ====================================
@@ -68,7 +69,7 @@ img {
 
 p {
   color: $text-color;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.4;
 }
 
@@ -104,7 +105,7 @@ Global Classes
 
 /*============== Section ================*/
 .section {
-  padding: 4rem 0 2rem 0;
+  padding: 4rem 0;
 }
 
 .section-title,
@@ -345,20 +346,28 @@ Home Section
   align-content: space-around;
   row-gap: 1rem;
   margin: 0 5.5rem 0 5.5rem;
+  max-width: 1300px;
+  margin: 0 auto;
+  margin-top: 7rem;
 }
 
 .home-content {
   position: relative;
   margin-top: 100px;
   margin-left: 2rem;
-  border-left: 4px solid $white;
   color: $secondary-color-light;
-  padding-left: 2.5rem;
   z-index: 1;
+  margin-left: 3.25rem;
+  padding-top: 2.5rem;
+
+  &__container {
+    border-left: 4px solid $white;
+    padding-left: 2.75rem;
+  }
 
   .home__name {
     margin-top: 2rem;
-    font-size: 3.2rem;
+    font-size: 3.5rem;
     letter-spacing: 3px;
   }
 
@@ -368,6 +377,7 @@ Home Section
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
     margin-top: 0.5rem;
+    padding-left: 0.15rem;
   }
 
   .button {
@@ -386,6 +396,7 @@ Home Section
 }
 
 .home__img {
+  margin: 2rem 0;
   position: absolute;
   right: 0;
   top: 0;
@@ -393,7 +404,8 @@ Home Section
   z-index: 0;
 
   img {
-    height: 95%;
+    height: 100%;
+    width: auto;
     max-width: 500px;
   }
 }
@@ -405,6 +417,7 @@ Home Section
   padding-left: 1rem;
   flex-direction: column;
   margin-top: 10rem;
+  margin-left: 1rem;
 }
 
 .fa-linkedin,
@@ -438,8 +451,8 @@ About Section
 }
 
 .greeting {
-  font-size: 1.6rem;
-  font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 #profile-pic {
@@ -461,7 +474,6 @@ About Section
   width: calc(100% - 2rem);
 
   .about__description {
-    text-indent: 5%;
     margin-top: 1.5rem;
     padding: 0 2rem;
   }
@@ -477,9 +489,11 @@ About Section
 
     .about__description--tech {
       margin-bottom: 1rem;
-      font-weight: bold;
-      text-decoration: underline;
+      margin-top: 1.5rem;
+      font-weight: 500;
       text-align: center;
+      color: $black;
+      font-size: 1.25rem;
     }
 
     .skills {
@@ -488,14 +502,16 @@ About Section
       justify-content: center;
       list-style-type: disc !important;
       list-style: disc !important;
+      padding-left: 15px;
 
       &__item {
-        margin-bottom: 2px;
+        margin: 0.25rem 0;
         color: $black;
         width: 100%;
         font-family: inherit;
         position: relative;
-        padding-left: 15px;
+        font-weight: 400;
+
         justify-content: center;
         list-style-position: inside;
       }
@@ -572,7 +588,7 @@ Projects Section
   padding: 0 14rem;
 
   .project-name {
-    color: $secondary-color-light;
+    color: $white;
     margin-bottom: 1.5rem;
   }
 
@@ -600,8 +616,40 @@ Projects Section
 }
 
 .weblink {
-  text-decoration: underline;
-  color: $secondary-color;
+  // text-decoration: underline;
+  color: $secondary-color-light;
+  display: inline-block;
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  position: relative;
+  font-weight: 400;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 2px;
+    position: relative;
+    bottom: 0.19em;
+    background-color: $secondary-color-light;
+    transition: $transition;
+    opacity: 0.75;
+  }
+
+  &:hover::after,
+  &:focus::after,
+  &:active::after {
+    width: 100%;
+  }
+}
+
+.weblink--black {
+  color: $text-color;
+  font-weight: 500;
+
+  &::after {
+    background-color: $text-color;
+  }
 }
 
 /*
@@ -913,9 +961,9 @@ Mobile Devices
     margin: 0;
   }
 
-  .about__data .tech__stack .skills__item {
-    padding-left: 5px;
-  }
+  // .about__data .tech__stack .skills__item {
+  //   padding-left: 5px;
+  // }
 
   /*============== Projects ================*/
   .project-content {
@@ -935,5 +983,29 @@ Mobile Devices
 
   .popup {
     margin-bottom: -400px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .home-content {
+    margin-top: 50px;
+  }
+
+  .home__container {
+    margin: 2rem 0 0 0;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .home-content__container {
+    padding-left: 1rem;
+  }
+
+  .skills {
+    padding-left: 0;
+  }
+
+  .skills__item {
+    font-size: 0.85rem;
   }
 }

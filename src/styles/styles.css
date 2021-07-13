@@ -57,7 +57,7 @@ img {
 
 p {
   color: #524748;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.4;
 }
 
@@ -92,7 +92,7 @@ Global Classes
 */
 /*============== Section ================*/
 .section {
-  padding: 4rem 0 2rem 0;
+  padding: 4rem 0;
 }
 
 .section-title,
@@ -394,21 +394,29 @@ Home Section
       align-content: space-around;
   row-gap: 1rem;
   margin: 0 5.5rem 0 5.5rem;
+  max-width: 1300px;
+  margin: 0 auto;
+  margin-top: 7rem;
 }
 
 .home-content {
   position: relative;
   margin-top: 100px;
   margin-left: 2rem;
-  border-left: 4px solid #fff;
   color: #fbf9f9;
-  padding-left: 2.5rem;
   z-index: 1;
+  margin-left: 3.25rem;
+  padding-top: 2.5rem;
+}
+
+.home-content__container {
+  border-left: 4px solid #fff;
+  padding-left: 2.75rem;
 }
 
 .home-content .home__name {
   margin-top: 2rem;
-  font-size: 3.2rem;
+  font-size: 3.5rem;
   letter-spacing: 3px;
 }
 
@@ -418,6 +426,7 @@ Home Section
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
   margin-top: 0.5rem;
+  padding-left: 0.15rem;
 }
 
 .home-content .button {
@@ -438,6 +447,7 @@ Home Section
 }
 
 .home__img {
+  margin: 2rem 0;
   position: absolute;
   right: 0;
   top: 0;
@@ -446,7 +456,8 @@ Home Section
 }
 
 .home__img img {
-  height: 95%;
+  height: 100%;
+  width: auto;
   max-width: 500px;
 }
 
@@ -462,6 +473,7 @@ Home Section
       -ms-flex-direction: column;
           flex-direction: column;
   margin-top: 10rem;
+  margin-left: 1rem;
 }
 
 .fa-linkedin,
@@ -501,8 +513,8 @@ About Section
 }
 
 .greeting {
-  font-size: 1.6rem;
-  font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 #profile-pic {
@@ -527,7 +539,6 @@ About Section
 }
 
 .about__data .about__description {
-  text-indent: 5%;
   margin-top: 1.5rem;
   padding: 0 2rem;
 }
@@ -544,9 +555,11 @@ About Section
 
 .about__data .tech__stack .about__description--tech {
   margin-bottom: 1rem;
-  font-weight: bold;
-  text-decoration: underline;
+  margin-top: 1.5rem;
+  font-weight: 500;
   text-align: center;
+  color: #000;
+  font-size: 1.25rem;
 }
 
 .about__data .tech__stack .skills {
@@ -559,15 +572,16 @@ About Section
           justify-content: center;
   list-style-type: disc !important;
   list-style: disc !important;
+  padding-left: 15px;
 }
 
 .about__data .tech__stack .skills__item {
-  margin-bottom: 2px;
+  margin: 0.25rem 0;
   color: #000;
   width: 100%;
   font-family: inherit;
   position: relative;
-  padding-left: 15px;
+  font-weight: 400;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -660,7 +674,7 @@ Projects Section
 }
 
 .project-content .project-name {
-  color: #fbf9f9;
+  color: #fff;
   margin-bottom: 1.5rem;
 }
 
@@ -687,8 +701,38 @@ Projects Section
 }
 
 .weblink {
-  text-decoration: underline;
-  color: #cbcbcb;
+  color: #fbf9f9;
+  display: inline-block;
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  position: relative;
+  font-weight: 400;
+}
+
+.weblink::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 2px;
+  position: relative;
+  bottom: 0.19em;
+  background-color: #fbf9f9;
+  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  opacity: 0.75;
+}
+
+.weblink:hover::after, .weblink:focus::after, .weblink:active::after {
+  width: 100%;
+}
+
+.weblink--black {
+  color: #524748;
+  font-weight: 500;
+}
+
+.weblink--black::after {
+  background-color: #524748;
 }
 
 /*
@@ -1009,9 +1053,6 @@ Mobile Devices
   .about__sub-desc {
     margin: 0;
   }
-  .about__data .tech__stack .skills__item {
-    padding-left: 5px;
-  }
   /*============== Projects ================*/
   .project-content {
     padding: 0 4rem;
@@ -1028,6 +1069,27 @@ Mobile Devices
   }
   .popup {
     margin-bottom: -400px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .home-content {
+    margin-top: 50px;
+  }
+  .home__container {
+    margin: 2rem 0 0 0;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .home-content__container {
+    padding-left: 1rem;
+  }
+  .skills {
+    padding-left: 0;
+  }
+  .skills__item {
+    font-size: 0.85rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */
