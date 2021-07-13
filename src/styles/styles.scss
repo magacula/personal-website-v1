@@ -70,7 +70,7 @@ img {
 p {
   color: $text-color;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.35;
 }
 
 @media screen and (min-width: 800px) {
@@ -475,7 +475,11 @@ About Section
 
   .about__description {
     margin-top: 1.5rem;
-    padding: 0 2rem;
+    padding: 0 8em;
+  }
+
+  .about__description--newline {
+    margin-top: 1rem;
   }
 
   .about__sub-desc {
@@ -502,7 +506,7 @@ About Section
       justify-content: center;
       list-style-type: disc !important;
       list-style: disc !important;
-      padding-left: 15px;
+      padding: 0 15px;
 
       &__item {
         margin: 0.25rem 0;
@@ -956,9 +960,14 @@ Mobile Devices
     height: auto;
   }
 
-  .about__description,
+  .about__data .about__description,
   .about__sub-desc {
     margin: 0;
+    padding: 0 2rem;
+  }
+
+  .about__data .about__description--newline {
+    margin-top: 1.25rem;
   }
 
   // .about__data .tech__stack .skills__item {
@@ -994,18 +1003,14 @@ Mobile Devices
   .home__container {
     margin: 2rem 0 0 0;
   }
+
+  .skills__item {
+    font-size: 0.8rem;
+  }
 }
 
 @media screen and (max-width: 375px) {
   .home-content__container {
     padding-left: 1rem;
-  }
-
-  .skills {
-    padding-left: 0;
-  }
-
-  .skills__item {
-    font-size: 0.85rem;
   }
 }
