@@ -341,32 +341,42 @@ Home Section
 
 .home__container {
   position: relative;
-  height: calc(100vh - 6rem);
-  grid-template-rows: repeat(2, max-content);
-  align-content: space-around;
-  row-gap: 1rem;
-  margin: 0 5.5rem 0 5.5rem;
-  max-width: 1300px;
+  // height: calc(100vh - 6rem);
   margin: 0 auto;
-  margin-top: 7rem;
+  margin-top: 5rem;
+
+  // NEW STYLES
+  height: 100vh;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.07);
+  }
 }
 
 .home-content {
   position: relative;
-  margin-top: 100px;
-  margin-left: 2rem;
   color: $secondary-color-light;
-  z-index: 1;
-  margin-left: 3.25rem;
-  padding-top: 2.5rem;
+  z-index: 5;
+  margin-left: 1.5rem;
 
   &__container {
     border-left: 4px solid $white;
-    padding-left: 2.75rem;
+    padding-left: 2.5rem;
   }
 
   .home__name {
-    margin-top: 2rem;
     font-size: 3.5rem;
     letter-spacing: 3px;
   }
@@ -395,18 +405,21 @@ Home Section
   }
 }
 
-.home__img {
-  margin: 2rem 0;
+.home__background {
   position: absolute;
-  right: 0;
   top: 0;
-  bottom: 5px;
-  z-index: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 
   img {
+    width: 100%;
     height: 100%;
-    width: auto;
-    max-width: 500px;
+    -o-object-fit: cover;
+    object-fit: cover;
   }
 }
 
@@ -416,8 +429,9 @@ Home Section
   display: flex;
   padding-left: 1rem;
   flex-direction: column;
-  margin-top: 10rem;
-  margin-left: 1rem;
+
+  margin-top: 2rem;
+  margin-left: 2.5rem;
 }
 
 .fa-linkedin,
@@ -941,7 +955,7 @@ Mobile Devices
     }
   }
 
-  .home__img {
+  .home__background {
     bottom: 5px;
     z-index: 0;
 
@@ -952,6 +966,7 @@ Mobile Devices
 
   .home__social {
     margin-top: 5rem;
+    flex-direction: column;
   }
 
   /*============== About ================*/
@@ -996,12 +1011,18 @@ Mobile Devices
 }
 
 @media screen and (max-width: 425px) {
-  .home-content {
-    margin-top: 50px;
+  .home__container {
+    display: grid;
   }
 
-  .home__container {
-    margin: 2rem 0 0 0;
+  .home-content {
+    margin-top: 100px;
+  }
+
+  .home__social {
+    padding-left: 0;
+    margin-top: 0;
+    margin-left: 0;
   }
 
   .skills__item {
