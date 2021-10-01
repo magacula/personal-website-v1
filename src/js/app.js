@@ -105,3 +105,11 @@ gsap.from(
     stagger: 0.16,
   }
 );
+
+/*
+============================================================
+Adding Year to Footer
+============================================================
+*/
+const footer = document.querySelector(".website__rights");
+footer.innerHTML = `CopyRight © ${new Date().getFullYear()} Makoi Gacula. All rights reserved.`;

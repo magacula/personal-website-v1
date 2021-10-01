@@ -712,7 +712,9 @@ Footer
 
   .website__rights {
     font-size: 1rem;
-    margin-top: 1rem;
+    padding: 0.5rem 0;
+    display: flex;
+    justify-content: center;
     color: $secondary-color;
   }
 }
